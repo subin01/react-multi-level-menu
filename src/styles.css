@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #999;
+}
+.App {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 1rem;
+}
+a:hover {
+  background: #08454a;
+  color: #fff;
+}
+
+nav ul {
+  background: #e5e5e5;
+  padding: 0;
+  margin: 0;
+  width: 80vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  border-right: 1px solid #3d7579;
+}
+
+nav ul.level-1 {
+  display: block;
+  background: #fff;
+}
+
+nav ul.level-2 {
+  left: 2vw;
+}
+
+nav ul.level-3 {
+  left: 5vw;
+}
+
+@media only screen and (min-width: 1024px) {
+  nav ul {
+    width: 25vw;
+  }
+
+  nav ul.level-2 {
+    left: 25vw;
+  }
+
+  nav ul.level-3 {
+    left: 25vw;
+    width: 50vw;
+  }
+
+  nav ul.level-3 li {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* Hover effects */
+nav ul.level-1 li:hover > ul.level-2 {
+  display: block;
+}
+
+nav ul.level-2 li:hover > ul.level-3 {
+  display: block;
+}
+
+nav li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #a6bfbf;
+  height: 3rem;
+}
